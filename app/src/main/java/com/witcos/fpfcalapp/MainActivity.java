@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private int tuoniao1=0,tuoniao2=0,tuoniao3=0,tuoniao4=0;
     private EditText huxi_edit1,huxi_edit2,huxi_edit3,huxi_edit4;
     private int huxi1,huxi2,huxi3,huxi4;
+    private  int hx1,hx2,hx3,hx4;
     private TextView jieguo_view1,jieguo_view2,jieguo_view3,jieguo_view4;
     private Button jisuan_btn,clean_btn,exit_btn;
 
@@ -79,26 +80,26 @@ public class MainActivity extends AppCompatActivity {
             huxi2=Integer.parseInt(huxi_edit2.getText().toString());
             huxi3=Integer.parseInt(huxi_edit3.getText().toString());
             if(huxi1%10>=5)
-                huxi1=(huxi1/10+1)*10;
+                hx1=(huxi1/10+1)*10;
             else
-                huxi1=huxi1/10*10;
+                hx1=huxi1/10*10;
             if(huxi2%10>=5)
-                huxi2=(huxi2/10+1)*10;
+                hx2=(huxi2/10+1)*10;
             else
-                huxi2=huxi2/10*10;
+                hx2=huxi2/10*10;
             if(huxi3%10>=5)
-                huxi3=(huxi3/10+1)*10;
+                hx3=(huxi3/10+1)*10;
             else
-                huxi3=huxi3/10*10;
+                hx3=huxi3/10*10;
             tuoniao4=huxi4=huoniao4=0;
             if(actors==4){
                 huoniao4 = Integer.parseInt(huoniao_edit4.getText().toString());
                 tuoniao4=Integer.parseInt(tuoniao_edit4.getText().toString());
                 huxi4=Integer.parseInt(huxi_edit4.getText().toString());
                 if(huxi4%10>=5)
-                    huxi4=(huxi4/10+1)*10;
+                    hx4=(huxi4/10+1)*10;
                 else
-                    huxi4=huxi4/10*10;
+                    hx4=huxi4/10*10;
             }
         }
         catch (Exception e){
@@ -114,99 +115,57 @@ public class MainActivity extends AppCompatActivity {
             if(huoniao1+huoniao2+huoniao3+huoniao4+tuoniao1+tuoniao2+tuoniao3+tuoniao4+jiage>=0) {
                 int jia = 0, yi = 0, bing = 0, ding = 0;//甲乙丙丁的胡子
                 double jia_moneny = 0, yi_moneny = 0, bing_moneny = 0, ding_moneny = 0;//甲乙丙丁的钱
-                int max = huxi1, i = 1;
                 if (actors == 4) {
-                    jia = ((huxi1 - huxi2) * (huoniao2 + 1) + (huxi1 - huxi3) * (huoniao3 + 1) + (huxi1 - huxi4) * (huoniao4 + 1)) * (huoniao1 + 1);
-                    yi = ((huxi2 - huxi1) * (huoniao1 + 1) + (huxi2 - huxi3) * (huoniao3 + 1) + (huxi2 - huxi4) * (huoniao4 + 1)) * (huoniao2 + 1);
-                    bing = ((huxi3 - huxi1) * (huoniao1 + 1) + (huxi3 - huxi2) * (huoniao2 + 1) + (huxi3 - huxi4) * (huoniao4 + 1)) * (huoniao3 + 1);
-                    ding = ((huxi4 - huxi1) * (huoniao1 + 1) + (huxi4 - huxi3) * (huoniao3 + 1) + (huxi4 - huxi2) * (huoniao2 + 1)) * (huoniao4 + 1);
-                    if (max < huxi2) {
-                        max = huxi2;
-                        i = 2;
-                    }
-                    if (max < huxi3) {
-                        max = huxi3;
-                        i = 3;
-                    }
-                    if (max < huxi4) {
-                        i = 4;
-                    }
-                    switch (i) {
-                        case 1:
-                            jia_moneny += tuoniao1 * 3 + tuoniao2 + tuoniao3 + tuoniao4;
-                            yi_moneny -= tuoniao2 + tuoniao1;
-                            bing_moneny -= tuoniao3 + tuoniao1;
-                            ding_moneny -= tuoniao4 + tuoniao1;
-                            break;
-                        case 2:
-                            yi_moneny += tuoniao2 * 3 + tuoniao1 + tuoniao3 + tuoniao4;
-                            jia_moneny -= tuoniao1 + tuoniao2;
-                            bing_moneny -= tuoniao3 + tuoniao2;
-                            ding_moneny -= tuoniao2 + tuoniao2;
-                            break;
-                        case 3:
-                            bing_moneny += tuoniao3 * 3 + tuoniao1 + tuoniao2 + tuoniao4;
-                            jia_moneny -= tuoniao3 + tuoniao1;
-                            yi_moneny -= tuoniao3 + tuoniao2;
-                            ding_moneny -= tuoniao3 + tuoniao4;
-                            break;
-                        case 4:
-                            ding_moneny += tuoniao4 * 3 + tuoniao1 + tuoniao2 + tuoniao3;
-                            jia_moneny -= tuoniao4 + tuoniao1;
-                            yi_moneny -= tuoniao4 + tuoniao2;
-                            bing_moneny -= tuoniao4 + tuoniao3;
-                            break;
-                    }
+                    //计算胡息
+                    jia = ((hx1 - hx2) * (huoniao2 + 1) + (hx1 - hx3) * (huoniao3 + 1) + (hx1 - hx4) * (huoniao4 + 1)) * (huoniao1 + 1);
+                    yi = ((hx2 - hx1) * (huoniao1 + 1) + (hx2 - hx3) * (huoniao3 + 1) + (hx2 - hx4) * (huoniao4 + 1)) * (huoniao2 + 1);
+                    bing = ((hx3 - hx1) * (huoniao1 + 1) + (hx3 - hx2) * (huoniao2 + 1) + (hx3 - hx4) * (huoniao4 + 1)) * (huoniao3 + 1);
+                    ding = ((hx4 - hx1) * (huoniao1 + 1) + (hx4 - hx3) * (huoniao3 + 1) + (hx4 - hx2) * (huoniao2 + 1)) * (huoniao4 + 1);
+                    //计算拖鸟输赢
+                    jia_moneny+=compare(huxi1,huxi2)*(tuoniao1+tuoniao2)+compare(huxi1,huxi3)*(tuoniao1+tuoniao3)+compare(huxi1,huxi4)*(tuoniao1+tuoniao4);
+                    yi_moneny+=compare(huxi2,huxi1)*(tuoniao2+tuoniao1)+compare(huxi2,huxi3)*(tuoniao2+tuoniao3)+compare(huxi2,huxi4)*(tuoniao2+tuoniao4);
+                    bing_moneny+=compare(huxi3,huxi1)*(tuoniao3+tuoniao1)+compare(huxi3,huxi2)*(tuoniao3+tuoniao2)+compare(huxi3,huxi4)*(tuoniao3+tuoniao4);
+                    ding_moneny+=compare(huxi4,huxi1)*(tuoniao4+tuoniao1)+compare(huxi4,huxi2)*(tuoniao4+tuoniao2)+compare(huxi4,huxi3)*(tuoniao4+tuoniao3);
+                    //计算活鸟输赢
                     jia_moneny += jia * jiage;
                     yi_moneny += yi * jiage;
                     bing_moneny += bing * jiage;
                     ding_moneny += ding * jiage;
-                    jieguo_view1.setText(String.valueOf(Math.round(jia_moneny*10/10.0)));
-                    jieguo_view2.setText(String.valueOf(Math.round(yi_moneny*10/10.0)));
-                    jieguo_view3.setText(String.valueOf(Math.round(bing_moneny*10/10.0)));
+                    //显示
                     jieguo_view4.setText(String.valueOf(Math.round(ding_moneny*10/10.0)));
                 }
                 else {
-                    jia = ((huxi1 - huxi2) * (huoniao2 + 1) + (huxi1 - huxi3) * (huoniao3 + 1) ) * (huoniao1 + 1);
-                    yi = ((huxi2 - huxi1) * (huoniao1 + 1) + (huxi2 - huxi3) * (huoniao3 + 1) ) * (huoniao2 + 1);
-                    bing = ((huxi3 - huxi1) * (huoniao1 + 1) + (huxi3 - huxi2) * (huoniao2 + 1) ) * (huoniao3 + 1);
-                    if (max < huxi2) {
-                        max = huxi2;
-                        i = 2;
-                    }
-                    if (max < huxi3) {
-                        i = 3;
-                    }
-                    switch (i) {
-                        case 1:
-                            jia_moneny += tuoniao1 * 2 + tuoniao2 + tuoniao3 ;
-                            yi_moneny -= tuoniao2 + tuoniao1;
-                            bing_moneny -= tuoniao3 + tuoniao1;
-                            break;
-                        case 2:
-                            yi_moneny += tuoniao2 * 2 + tuoniao1 + tuoniao3 ;
-                            jia_moneny -= tuoniao1 + tuoniao2;
-                            bing_moneny -= tuoniao3 + tuoniao2;
-                            break;
-                        case 3:
-                            bing_moneny += tuoniao3 * 2 + tuoniao1 + tuoniao2;
-                            jia_moneny -= tuoniao3 + tuoniao1;
-                            yi_moneny -= tuoniao3 + tuoniao2;
-                            break;
-                    }
+                    //三人玩，计算胡息
+                    jia = ((hx1 - hx2) * (huoniao2 + 1) + (hx1 - hx3) * (huoniao3 + 1) ) * (huoniao1 + 1);
+                    yi = ((hx2 - hx1) * (huoniao1 + 1) + (hx2 - hx3) * (huoniao3 + 1) ) * (huoniao2 + 1);
+                    bing = ((hx3 - hx1) * (huoniao1 + 1) + (hx3 - hx2) * (huoniao2 + 1) ) * (huoniao3 + 1);
+
+                    //三人版，计算拖鸟输赢
+                    jia_moneny+=compare(huxi1,huxi2)*(tuoniao1+tuoniao2)+compare(huxi1,huxi3)*(tuoniao1+tuoniao3);
+                    yi_moneny+=compare(huxi2,huxi1)*(tuoniao2+tuoniao1)+compare(huxi2,huxi3)*(tuoniao2+tuoniao3);
+                    bing_moneny+=compare(huxi3,huxi1)*(tuoniao3+tuoniao1)+compare(huxi3,huxi2)*(tuoniao3+tuoniao2);
+
+                    //三人版，计算活鸟输赢
                     jia_moneny += jia * jiage;
                     yi_moneny += yi * jiage;
                     bing_moneny += bing * jiage;
-                    jieguo_view1.setText(String.valueOf(Math.round(jia_moneny*10/10.0)));
-                    jieguo_view2.setText(String.valueOf(Math.round(yi_moneny*10/10.0)));
-                    jieguo_view3.setText(String.valueOf(Math.round(bing_moneny*10/10.0)));
                 }
+                jieguo_view1.setText(String.valueOf(Math.round(jia_moneny*10/10.0)));
+                jieguo_view2.setText(String.valueOf(Math.round(yi_moneny*10/10.0)));
+                jieguo_view3.setText(String.valueOf(Math.round(bing_moneny*10/10.0)));
             }else {
                 Toast.makeText(getApplicationContext(), "不能输入负数", Toast.LENGTH_SHORT).show();
                 jiage_edit.setFocusable(true);
             }
         }
+
+        private int compare(int x,int y){
+            if(x==y) return 0;
+            return  x>y?1:-1;
+        }
     }
+
+
 
     class MyOnCheckChangLinster implements RadioGroup.OnCheckedChangeListener{
         //选择参与人数时执行

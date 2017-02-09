@@ -310,6 +310,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:textSize="20sp"
-        android:text="码哥作品，免费使用！2017年2月6日"/>
+        android:text="码哥作品，免费使用！2017年2月6日\n感谢聂哈提出宝贵意见！2月9日"/>
 </LinearLayout>
 
