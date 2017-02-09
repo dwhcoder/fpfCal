@@ -79,32 +79,31 @@ public class MainActivity extends AppCompatActivity {
             huxi1=Integer.parseInt(huxi_edit1.getText().toString());
             huxi2=Integer.parseInt(huxi_edit2.getText().toString());
             huxi3=Integer.parseInt(huxi_edit3.getText().toString());
-            if(huxi1%10>=5)
-                hx1=(huxi1/10+1)*10;
-            else
-                hx1=huxi1/10*10;
-            if(huxi2%10>=5)
-                hx2=(huxi2/10+1)*10;
-            else
-                hx2=huxi2/10*10;
-            if(huxi3%10>=5)
-                hx3=(huxi3/10+1)*10;
-            else
-                hx3=huxi3/10*10;
+            hx1=myInt(huxi1);
+            hx2=myInt(huxi2);
+            hx3=myInt(huxi3);
             tuoniao4=huxi4=huoniao4=0;
             if(actors==4){
                 huoniao4 = Integer.parseInt(huoniao_edit4.getText().toString());
                 tuoniao4=Integer.parseInt(tuoniao_edit4.getText().toString());
                 huxi4=Integer.parseInt(huxi_edit4.getText().toString());
-                if(huxi4%10>=5)
-                    hx4=(huxi4/10+1)*10;
-                else
-                    hx4=huxi4/10*10;
+                hx4=myInt(huxi4);
             }
         }
         catch (Exception e){
             e.printStackTrace();
         }
+    }
+
+    private int myInt(int huxi){
+        int tag=1,huxi_abs;
+        huxi_abs=Math.abs(huxi);
+        if(huxi<0) tag=-1;
+        if(huxi_abs%10>=5)
+            huxi_abs=(huxi_abs/10+1)*10;
+        else
+            huxi_abs=huxi_abs/10*10;
+        return huxi_abs*tag;
     }
 
     class MyOnClickLinster implements View.OnClickListener{
