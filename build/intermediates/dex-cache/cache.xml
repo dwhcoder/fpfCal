@@ -3,138 +3,291 @@
 
     <item
         is-multidex="false"
-        jar="I:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
-        jumboMode="false"
+        jar="H:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
-        <dex dex="I:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-24.2.1_ce2dcf8e44580e53a37f3818d24c1524fe87f60a.jar" />
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-24.2.1_8637d3569b76700e283e77667f017f081606e77f.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="I:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
-        jumboMode="false"
+        jar="H:\dwh\android\FPFCalApp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="I:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.2.1_e6e88bc5f9b09c0baa82c4d4363ae44334b7b59d.jar" />
+        sha1="0782ee5ca533749514e83ff73d678c55b0f06100">
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_d39716f9bbd9c57fe9e9f66504c121665104f6f7.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\hp0452\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
-        <dex dex="I:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\support-annotations-24.2.1_29f1893d5f97f7a3e9154fc008e7751b4fa8c59a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="I:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="I:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_cf5e53127215395b20a58140b54137a8ca55803b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="I:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="867dad63c33388ff8c7644b236579355036d075f">
-        <dex dex="I:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_403227ff2745dbe8039a64f2024895a8d4b245b7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="I:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="I:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_64cee253eef27ae81edb6efae1889cd8e9438b5f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="I:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
-        <dex dex="I:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-24.2.1_d0a93bdfbefc6a1d55a05d4683ea37dd96ebcd79.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="I:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
-        <dex dex="I:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-24.2.1_e0f5922e587c481cfc52c9aa6141bc2c678bc630.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="I:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="I:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.2.1_f07af6ba5e5db8883831a52781425ed354332106.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="I:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
-        <dex dex="I:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.2.1_64770df9172f00e2a3c0f22fa0fd0e0d8d92b6f1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="I:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="I:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-24.2.1_22236f13f5a31c27887d2dbb26da517848bc6fad.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="I:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
-        <dex dex="I:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.2.1_abe0e435812bbad681ca872ece17b0cdf448e7a4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="I:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="I:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_92665c5cb0193c3dfa02a096a054dd1dcf8ac176.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="I:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jar="H:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="I:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_5839aa229fe2a74ebf3934915d576bcb2d27716b.jar" />
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\release\internal_impl-24.2.1_9e3bd9bf35b3cb42a4df8643296cada06e4f67e2.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="I:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jar="H:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_9e3bd9bf35b3cb42a4df8643296cada06e4f67e2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="I:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-24.2.1_966b703f745b6b2ee19fc2140ead8fdf1644030c.jar" />
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\release\com.android.support-support-compat-24.2.1_cd50f4e3f0ee556799ff9b22f1ec4ca1fdcb92ce.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\release\com.android.support-support-vector-drawable-24.2.1_23a87703bfb57842a648f502d82779cc96c1cfcf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_2b0482cc5e9bbba78d7fd9fc8f1370b5efdb3207.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.2.1_23a87703bfb57842a648f502d82779cc96c1cfcf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\release\internal_impl-24.2.1_2b0482cc5e9bbba78d7fd9fc8f1370b5efdb3207.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\dwh\android\FPFCalApp\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="500389e9e165f81b5104a8a17c3a6d568faa20a2">
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\instant-run_4d5e4ac3b0dda2987bc59cd98ef587d8f17bf61a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-24.2.1_cd50f4e3f0ee556799ff9b22f1ec4ca1fdcb92ce.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\release\com.android.support-appcompat-v7-24.2.1_3decdfc4a878e281b6eff884c9c58f2aea54b8a5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-24.2.1_dd7b8a0877f08959a19e6999b079fbc153c8d48c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\release\com.android.support-support-fragment-24.2.1_0b9a6df5b92401447a32a856c1af259711ede795.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-24.2.1_0b9a6df5b92401447a32a856c1af259711ede795.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\release\com.android.support-support-media-compat-24.2.1_dd7b8a0877f08959a19e6999b079fbc153c8d48c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\release\internal_impl-24.2.1_386372118362b3f1468a031afecf6e2921fcc537.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\release\com.android.support-animated-vector-drawable-24.2.1_3b89f564e52621e57a5305fc799b488dbf0e1e4c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\release\com.android.support-support-core-ui-24.2.1_b0b90e5eabd0250bbc5197159168aac9597cf7c9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidSDK\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\release\support-annotations-24.2.1_eeb17d55bc3c4231f2959f92658af670464c9ca0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.2.1_3b89f564e52621e57a5305fc799b488dbf0e1e4c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-24.2.1_b0b90e5eabd0250bbc5197159168aac9597cf7c9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidSDK\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\support-annotations-24.2.1_eeb17d55bc3c4231f2959f92658af670464c9ca0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_19bddb472136408a4418736eef7a58050d6451c9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_354ec8738b4f724f72ba0746ec93b91501da7ec7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_386372118362b3f1468a031afecf6e2921fcc537.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.2.1_3decdfc4a878e281b6eff884c9c58f2aea54b8a5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\release\com.android.support-support-core-utils-24.2.1_8637d3569b76700e283e77667f017f081606e77f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\release\internal_impl-24.2.1_19bddb472136408a4418736eef7a58050d6451c9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\release\com.android.support-support-v4-24.2.1_55a95c82b82fab7c9777fde440d1140df2254882.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\release\internal_impl-24.2.1_354ec8738b4f724f72ba0746ec93b91501da7ec7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\dwh\android\FPFCalApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="H:\dwh\android\FPFCalApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.2.1_55a95c82b82fab7c9777fde440d1140df2254882.jar" />
     </item>
 
 </items>
