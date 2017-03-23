@@ -8,7 +8,6 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,31 +15,33 @@ public class MainActivity extends AppCompatActivity {
     private RadioGroup actors_rgp;
     private RadioButton radioButtonThree;
     private int actors = 4;//参与人数
-    private EditText editText[][]=new EditText[3][4];   
-    private int huoniao1 = 0, huoniao2 = 0, huoniao3 = 0, huoniao4 = 0;
-    private EditText jiage_edit;
-    private double jiage = 0.5;
-    private int tuoniao1 = 0, tuoniao2 = 0, tuoniao3 = 0, tuoniao4 = 0;
-    private int huxi1, huxi2, huxi3, huxi4;
-    private TextView jieguo_view1, jieguo_view2, jieguo_view3, jieguo_view4;
-    private Button jisuan_btn, clean_btn, exit_btn;
-    private MyJiSuanOnClickLinstener myjisuan = new MyJiSuanOnClickLinstener();
+    private EditText editText[][] = new EditText[3][4];
+    //文本框二维数组：一维表示【0，1，2】：0代表活鸟参数，1代表拖鸟参数，2代表胡息参数
+    //另外一维表示玩家【0，1，2，3】为甲乙丙丁
+    private int huoNiao[] = {0, 0, 0, 0};//玩家甲乙丙丁的活鸟参数数组
+    private EditText price_edit;//打牌彩头的文本框对象
+    private double price = 0.5;
+    private int tuoNiao[] = {0, 0, 0, 0};//玩家甲乙丙丁的拖鸟参数数组
+    private int huXi[] = {0, 0, 0, 0};//玩家甲乙丙丁的胡息积分参数数组
+    double result[] = {0, 0, 0, 0};//甲乙丙丁的钱
+    private TextView result_view[] = new TextView[4];
+    private Button calculate_btn, clean_btn, exit_btn;
+    private MyCalculateOnClickListener myCal = new MyCalculateOnClickListener();
+    //计算按钮对应的单击事件监听对象
     private MyOnFocusChangListener myOnFocusChangListener = new MyOnFocusChangListener();
-    private MyClearOnClickLinstener myClearOnClickLinstener=new MyClearOnClickLinstener();
-
+    //文本框对应的焦点改变事件监听对象
+    private MyClearOnClickListener MyClearOnClickListener = new MyClearOnClickListener();
+    //清除按钮对应的单击事件监听对象
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        //设置布局文件
-
+        setContentView(R.layout.activity_main); //设置布局文件
         findObject();//寻找控件
-        actors_rgp.setOnCheckedChangeListener(new MyOnCheckChangLinstener());
-        //设置玩家人数事件监听对象
-        jisuan_btn.setOnClickListener(myjisuan);
-        //设置计算按钮单击事件监听对象
-        setEditFocusLinstener();//注册edit的焦点监听事件
-
+        actors_rgp.setOnCheckedChangeListener(new MyOnCheckChangListener());
+        //注册玩家人数事件监听对象
+        calculate_btn.setOnClickListener(myCal);
+        //注册计算按钮单击事件监听对象
+        setEditFocusListener();//注册edit的焦点监听事件
         exit_btn.setOnClickListener(new View.OnClickListener() {
             //设置退出按钮监听事件
             @Override
@@ -48,74 +49,53 @@ public class MainActivity extends AppCompatActivity {
                 System.exit(0);
             }
         });
-        clean_btn.setOnClickListener(myClearOnClickLinstener);
-
+        clean_btn.setOnClickListener(MyClearOnClickListener);
     }
-    
-    class MyClearOnClickLinstener implements View.OnClickListener{
+
+    class MyClearOnClickListener implements View.OnClickListener {
         @Override
         public void onClick(View v) {
             clear();
         }
     }
 
-    private void clear() {
-        editText[0][0].setText("0");
-        editText[0][1].setText("0");
-        editText[0][2].setText("0");
-        editText[0][3].setText("0");
-        editText[1][0].setText("0");
-        editText[1][1].setText("0");
-        editText[1][2].setText("0");
-        editText[1][3].setText("0");
-        editText[2][0].setText("0");
-        editText[2][1].setText("0");
-        editText[2][2].setText("0");
-        editText[2][3].setText("0");
-        jieguo_view1.setText("0");
-        jieguo_view2.setText("0");
-        jieguo_view3.setText("0");
-        jieguo_view4.setText("0");
+    private void clear() {//清除方法
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 4; j++) {
+                editText[i][j].setText("0");
+            }
+        }
+        for (int j = 0; j < 4; j++) {
+            result_view[j].setText("0");
+        }
     }
 
-    private void setEditFocusLinstener() {
-        editText[0][0].setOnFocusChangeListener(myOnFocusChangListener);
-        editText[0][1].setOnFocusChangeListener(myOnFocusChangListener);
-        editText[0][2].setOnFocusChangeListener(myOnFocusChangListener);
-        editText[0][3].setOnFocusChangeListener(myOnFocusChangListener);
-        editText[1][0].setOnFocusChangeListener(myOnFocusChangListener);
-        editText[1][1].setOnFocusChangeListener(myOnFocusChangListener);
-        editText[1][2].setOnFocusChangeListener(myOnFocusChangListener);
-        editText[1][3].setOnFocusChangeListener(myOnFocusChangListener);
-        editText[2][0].setOnFocusChangeListener(myOnFocusChangListener);
-        editText[2][1].setOnFocusChangeListener(myOnFocusChangListener);
-        editText[2][2].setOnFocusChangeListener(myOnFocusChangListener);
-        editText[2][3].setOnFocusChangeListener(myOnFocusChangListener);
-        jiage_edit.setOnFocusChangeListener(myOnFocusChangListener);
+    private void setEditFocusListener() {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 4; j++) {
+                editText[i][j].setOnFocusChangeListener(myOnFocusChangListener);
+            }
+        }
+        price_edit.setOnFocusChangeListener(myOnFocusChangListener);
     }
 
     private void init() {
-        try {
-            huoniao1 = Integer.parseInt(editText[0][0].getText().toString());
-            huoniao2 = Integer.parseInt(editText[0][1].getText().toString());
-            huoniao3 = Integer.parseInt(editText[0][2].getText().toString());
-
-            tuoniao1 = Integer.parseInt(editText[1][0].getText().toString());
-            tuoniao2 = Integer.parseInt(editText[1][1].getText().toString());
-            tuoniao3 = Integer.parseInt(editText[1][2].getText().toString());
-
-            jiage = Double.parseDouble(jiage_edit.getText().toString());
-
-            huxi1 = Integer.parseInt(editText[2][0].getText().toString());
-            huxi2 = Integer.parseInt(editText[2][1].getText().toString());
-            huxi3 = Integer.parseInt(editText[2][2].getText().toString());
-
-            tuoniao4 = huxi4 = huoniao4 = 0;
-            if (actors == 4) {
-                huoniao4 = Integer.parseInt(editText[0][3].getText().toString());
-                tuoniao4 = Integer.parseInt(editText[1][3].getText().toString());
-                huxi4 = Integer.parseInt(editText[2][3].getText().toString());
+        for(int i=0;i<3;i++){
+            for (int j=0;j<4;j++){
+                if(editText[i][j].getText().toString().equals(""))
+                    editText[i][j].setText("0");                
             }
+        }
+        if(price_edit.getText().toString().equals(""))
+            price_edit.setText("0.5");
+        try {
+            for (int i = 0; i < actors; i++) {//i是玩家                
+                huoNiao[i] = Integer.parseInt(editText[0][i].getText().toString());
+                tuoNiao[i] = Integer.parseInt(editText[1][i].getText().toString());
+                huXi[i] = Integer.parseInt(editText[2][i].getText().toString());
+            }
+            price = Double.parseDouble(price_edit.getText().toString());
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -140,123 +120,78 @@ public class MainActivity extends AppCompatActivity {
             if (hasFocus) {
                 editText.setText("");
             } else {
-                if (editText.getText().toString().equals("")){
-                    if(editText.getId()==R.id.jiage)
+                if (editText.getText().toString().equals("")) {
+                    if (editText.getId() == R.id.price)
                         editText.setText("0.5");
                     else
                         editText.setText("0");
                 }
-
             }
         }
     }
 
+    private void calculate() {//计算方法
+        result[0]=result[1]=result[2]=result[3]=0;
+        //先行初始化输赢结果为0
+        //下面采用两两结算的方法
+        for (int i = 0; i < actors; i++) {
+            for (int j = 0; j < actors; j++) {
+                result[i] += compare(huXi[i], huXi[j]) * (tuoNiao[i] + tuoNiao[j]);
+                //第一步：计算i玩家对j玩家在拖鸟上输赢
+                result[i] += (myInt(huXi[i]) - myInt(huXi[j])) * (huoNiao[i] + 1) * (huoNiao[j] + 1) * price;
+                //第二步：计算i玩家对j玩家在活鸟上输赢，并累计拖鸟输赢
+            }
+        }
+    }
 
-    class MyJiSuanOnClickLinstener implements View.OnClickListener {
+    private void view() {
+        for (int i = 0; i < actors; i++) {
+            result_view[i].setText(String.valueOf(Math.round(result[i] * 10 / 10.0)));
+        }
+    }
+
+
+    class MyCalculateOnClickListener implements View.OnClickListener {
         //计算最终结果
         @Override
         public void onClick(View v) {
             init();
-            if (huoniao1 + huoniao2 + huoniao3 + huoniao4 + tuoniao1 + tuoniao2 + tuoniao3 + tuoniao4 + jiage >= 0) {
-                double jia_moneny = 0, yi_moneny = 0, bing_moneny = 0, ding_moneny = 0;//甲乙丙丁的钱
-                if (actors == 4) {
-                    //拖鸟输赢
-                    jia_moneny += compare(huxi1, huxi2) * (tuoniao1 + tuoniao2) + compare(huxi1, huxi3) * (tuoniao1 + tuoniao3) + compare(huxi1, huxi4) * (tuoniao1 + tuoniao4);
-                    yi_moneny += compare(huxi2, huxi1) * (tuoniao2 + tuoniao1) + compare(huxi2, huxi3) * (tuoniao2 + tuoniao3) + compare(huxi2, huxi4) * (tuoniao2 + tuoniao4);
-                    bing_moneny += compare(huxi3, huxi1) * (tuoniao3 + tuoniao1) + compare(huxi3, huxi2) * (tuoniao3 + tuoniao2) + compare(huxi3, huxi4) * (tuoniao3 + tuoniao4);
-                    ding_moneny += compare(huxi4, huxi1) * (tuoniao4 + tuoniao1) + compare(huxi4, huxi2) * (tuoniao4 + tuoniao2) + compare(huxi4, huxi3) * (tuoniao4 + tuoniao3);
-
-                    //计算活鸟输赢,并累计了拖鸟输赢
-                    jia_moneny += (myInt(huxi1) - myInt(huxi2)) * (huoniao1 + 1) * (huoniao2 + 1) * jiage +
-                            (myInt(huxi1) - myInt(huxi3)) * (huoniao1 + 1) * (huoniao3 + 1) * jiage +
-                            (myInt(huxi1) - myInt(huxi4)) * (huoniao1 + 1) * (huoniao4 + 1) * jiage;
-                    yi_moneny += (myInt(huxi2) - myInt(huxi1)) * (huoniao2 + 1) * (huoniao1 + 1) * jiage +
-                            (myInt(huxi2) - myInt(huxi3)) * (huoniao2 + 1) * (huoniao3 + 1) * jiage +
-                            (myInt(huxi2) - myInt(huxi4)) * (huoniao2 + 1) * (huoniao4 + 1) * jiage;
-                    bing_moneny += (myInt(huxi3) - myInt(huxi1)) * (huoniao3 + 1) * (huoniao1 + 1) * jiage +
-                            (myInt(huxi3) - myInt(huxi2)) * (huoniao3 + 1) * (huoniao2 + 1) * jiage +
-                            (myInt(huxi3) - myInt(huxi4)) * (huoniao3 + 1) * (huoniao4 + 1) * jiage;
-                    ding_moneny += (myInt(huxi4) - myInt(huxi1)) * (huoniao4 + 1) * (huoniao1 + 1) * jiage +
-                            (myInt(huxi4) - myInt(huxi2)) * (huoniao4 + 1) * (huoniao2 + 1) * jiage +
-                            (myInt(huxi4) - myInt(huxi3)) * (huoniao4 + 1) * (huoniao3 + 1) * jiage;
-                    //显示
-                    jieguo_view1.setText(String.valueOf(Math.round(jia_moneny * 10 / 10.0)));
-                    jieguo_view2.setText(String.valueOf(Math.round(yi_moneny * 10 / 10.0)));
-                    jieguo_view3.setText(String.valueOf(Math.round(bing_moneny * 10 / 10.0)));
-                    jieguo_view4.setText(String.valueOf(Math.round(ding_moneny * 10 / 10.0)));
-                } else {
-                    //三人版，计算拖鸟输赢
-                    jia_moneny += compare(huxi1, huxi2) * (tuoniao1 + tuoniao2) + compare(huxi1, huxi3) * (tuoniao1 + tuoniao3);
-                    yi_moneny += compare(huxi2, huxi1) * (tuoniao2 + tuoniao1) + compare(huxi2, huxi3) * (tuoniao2 + tuoniao3);
-                    bing_moneny += compare(huxi3, huxi1) * (tuoniao3 + tuoniao1) + compare(huxi3, huxi2) * (tuoniao3 + tuoniao2);
-
-
-                    //三人版，计算活鸟输赢，并累计拖鸟输赢
-                    jia_moneny += (myInt(huxi1) - myInt(huxi2)) * (huoniao1 + 1) * (huoniao2 + 1) * jiage +
-                            (myInt(huxi1) - myInt(huxi3)) * (huoniao1 + 1) * (huoniao3 + 1) * jiage ;
-                    yi_moneny += (myInt(huxi2) - myInt(huxi1)) * (huoniao2 + 1) * (huoniao1 + 1) * jiage +
-                            (myInt(huxi2) - myInt(huxi3)) * (huoniao2 + 1) * (huoniao3 + 1) * jiage ;
-                    bing_moneny += (myInt(huxi3) - myInt(huxi1)) * (huoniao3 + 1) * (huoniao1 + 1) * jiage +
-                            (myInt(huxi3) - myInt(huxi2)) * (huoniao3 + 1) * (huoniao2 + 1) * jiage ;
-                    //显示
-                    jieguo_view1.setText(String.valueOf(Math.round(jia_moneny * 10 / 10.0)));
-                    jieguo_view2.setText(String.valueOf(Math.round(yi_moneny * 10 / 10.0)));
-                    jieguo_view3.setText(String.valueOf(Math.round(bing_moneny * 10 / 10.0)));
-                }
-
-            } else {
-                Toast.makeText(getApplicationContext(), "不能输入负数", Toast.LENGTH_SHORT).show();
-                jiage_edit.setFocusable(true);
-            }
+            calculate();
+            view();
         }
-
-
-
-
     }
 
-    private int compare(int x, int y) {
+    private int compare(int x, int y) {//比较xy,x==y返回0，x>y返回1，x<y返回-1
         if (x == y) return 0;
         return x > y ? 1 : -1;
     }
 
-    class MyOnCheckChangLinstener implements RadioGroup.OnCheckedChangeListener {
+    class MyOnCheckChangListener implements RadioGroup.OnCheckedChangeListener {
         //选择参与人数时执行
         @Override
         public void onCheckedChanged(RadioGroup group, int checkedId) {
             clear();
+            boolean tag;
             if (radioButtonThree.getId() == checkedId) {
                 actors = 3;
-                editText[0][3].setText("");
-                editText[1][3].setText("");
-                editText[2][3].setText("");
-                jieguo_view4.setText("");
-                jieguo_view4.setEnabled(false);
-                editText[0][3].setEnabled(false);
-                editText[1][3].setEnabled(false);
-                editText[2][3].setEnabled(false);
-                ding_view.setText("");
+                tag=false;
             } else {
                 actors = 4;
-                editText[0][3].setText("0");
-                editText[1][3].setText("0");
-                editText[2][3].setText("0");
-                jieguo_view4.setText("0");
-                jieguo_view4.setEnabled(true);
-                editText[0][3].setEnabled(true);
-                editText[1][3].setEnabled(true);
-                editText[2][3].setEnabled(true);
-                ding_view.setText("丁");
+                tag=true;
             }
+            for(int i=0;i<3;i++){
+                editText[i][3].setEnabled(tag);
+            }
+            result_view[3].setEnabled(tag);
+            ding_view.setEnabled(tag);
         }
     }
-
 
     private void findObject() {
         actors_rgp = (RadioGroup) findViewById(R.id.gamer);
         ding_view = (TextView) findViewById(R.id.ding);
         radioButtonThree = (RadioButton) findViewById(R.id.three);
-        jiage_edit = (EditText) findViewById(R.id.jiage);
+        price_edit = (EditText) findViewById(R.id.price);
         editText[0][0] = (EditText) findViewById(R.id.huoniao1);
         editText[0][1] = (EditText) findViewById(R.id.huoniao2);
         editText[0][2] = (EditText) findViewById(R.id.huoniao3);
@@ -265,16 +200,16 @@ public class MainActivity extends AppCompatActivity {
         editText[1][1] = (EditText) findViewById(R.id.tuoniao2);
         editText[1][2] = (EditText) findViewById(R.id.tuoniao3);
         editText[1][3] = (EditText) findViewById(R.id.tuoniao4);
-        jieguo_view1 = (TextView) findViewById(R.id.jieguo1);
-        jieguo_view2 = (TextView) findViewById(R.id.jieguo2);
-        jieguo_view3 = (TextView) findViewById(R.id.jieguo3);
-        jieguo_view4 = (TextView) findViewById(R.id.jieguo4);
+        result_view[0] = (TextView) findViewById(R.id.result1);
+        result_view[1] = (TextView) findViewById(R.id.result2);
+        result_view[2] = (TextView) findViewById(R.id.result3);
+        result_view[3] = (TextView) findViewById(R.id.result4);
         editText[2][0] = (EditText) findViewById(R.id.huxi1);
         editText[2][1] = (EditText) findViewById(R.id.huxi2);
         editText[2][2] = (EditText) findViewById(R.id.huxi3);
         editText[2][3] = (EditText) findViewById(R.id.huxi4);
-        
-        jisuan_btn = (Button) findViewById(R.id.jisuan);
+
+        calculate_btn = (Button) findViewById(R.id.calculate);
         clean_btn = (Button) findViewById(R.id.clean);
         exit_btn = (Button) findViewById(R.id.exit);
 

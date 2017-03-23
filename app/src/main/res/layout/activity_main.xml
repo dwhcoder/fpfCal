@@ -43,7 +43,7 @@
             android:textSize="15sp" />
 
         <EditText
-            android:id="@+id/jiage"
+            android:id="@+id/price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="5dp"
@@ -169,7 +169,7 @@
             android:layout_weight="1"
             android:text="0"
             android:textSize="15sp"
-            android:inputType="numberDecimal"/>
+            android:inputType="number"/>
         <EditText
             android:id="@+id/tuoniao2"
             android:layout_width="0dp"
@@ -258,28 +258,28 @@
             android:text="结果"/>
 
         <TextView
-            android:id="@+id/jieguo1"
+            android:id="@+id/result1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="18sp"
             android:text="0"/>
         <TextView
-            android:id="@+id/jieguo2"
+            android:id="@+id/result2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="18sp"
             android:text="0"/>
         <TextView
-            android:id="@+id/jieguo3"
+            android:id="@+id/result3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="18sp"
             android:text="0"/>
         <TextView
-            android:id="@+id/jieguo4"
+            android:id="@+id/result4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -296,7 +296,7 @@
         android:focusable="true"
         android:focusableInTouchMode="true">
         <Button
-            android:id="@+id/jisuan"
+            android:id="@+id/calculate"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
